@@ -4,6 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container mt-2">
         <h3 class="mb-4 text-center">Create New Employee</h3>
+
         <div class="mt-3">
             <asp:Label ID="lblMessage" runat="server" />
         </div>
@@ -133,7 +134,7 @@
         <hr />
         <h4 class="mt-4 mb-3 text-center">Employee List</h4>
         <asp:GridView ID="gvEmployee" runat="server" AutoGenerateColumns="False" AllowSorting="True" OnSorting="gvEmployee_Sorting" CssClass="table table-bordered"
-            DataKeyNames="Id" OnRowEditing="gvEmployee_RowEditing" OnRowUpdating="gvEmployee_RowUpdating" OnRowCreated
+            DataKeyNames="Id" OnRowEditing="gvEmployee_RowEditing" OnRowUpdating="gvEmployee_RowUpdating" OnRowCreated="gvEmployee_RowCreated"
             OnRowCancelingEdit="gvEmployee_RowCancelingEdit" OnRowDeleting="gvEmployee_RowDeleting" OnRowDataBound="gvEmployee_RowDataBound">
             <Columns>
                 <asp:TemplateField HeaderText="SL">

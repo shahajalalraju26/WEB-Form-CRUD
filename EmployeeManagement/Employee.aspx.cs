@@ -21,16 +21,44 @@ namespace EmployeeManagement
             {
                 Session["FormSubmitted"] = false;
                 LoadEmployees();
-
                 
+
+
             }
-            if (Session["SuccessMessage"] != null)
+
+
+
+        }
+
+        //For Extra Partial Header Text == OnRowCreated
+        protected void gvEmployee_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.Header)
             {
-                lblMessage.Text = GetAlert(Session["SuccessMessage"].ToString(), "success");
-                Session.Remove("SuccessMessage");
+                GridView grid = (GridView)sender;
+
+                // Create a new header row
+                GridViewRow headerRow = new GridViewRow(0, 0, DataControlRowType.Header, DataControlRowState.Normal);
+
+                // First group: Personal (e.g., SL, Name, Gender, Designation, Mobile)
+                TableCell personalHeader = new TableHeaderCell();
+                personalHeader.Text = "Personal";
+                personalHeader.ColumnSpan = 5;
+                personalHeader.HorizontalAlign = HorizontalAlign.Center;
+                personalHeader.BackColor = System.Drawing.Color.LightBlue;
+                headerRow.Cells.Add(personalHeader);
+
+                // Second group: Details (e.g., JoiningDate, NID, Address, Salary, Photo, Status, Actions)
+                TableCell detailsHeader = new TableHeaderCell();
+                detailsHeader.Text = "Details";
+                detailsHeader.ColumnSpan = grid.Columns.Count - 5; // Remaining columns
+                detailsHeader.HorizontalAlign = HorizontalAlign.Center;
+                detailsHeader.BackColor = System.Drawing.Color.LightGreen;
+                headerRow.Cells.Add(detailsHeader);
+
+                // Insert the new header row at the top
+                grid.Controls[0].Controls.AddAt(0, headerRow);
             }
-
-
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -54,7 +82,7 @@ namespace EmployeeManagement
                     string[] allowedExtensions = { ".jpg", ".jpeg", ".png", ".gif" };
                     if (!allowedExtensions.Contains(extension))
                     {
-                        lblMessage.Text = GetAlert("❌ Only image files (.jpg, .jpeg, .png, .gif) are allowed.", "danger");
+                        lblMessage.Text = GetAlert(" Only image files (.jpg, .jpeg, .png, .gif) are allowed.", "danger");
                         return;
                     }
 
@@ -95,17 +123,14 @@ namespace EmployeeManagement
                 }
 
                 Session["FormSubmitted"] = true;
-                Session["SuccessMessage"] = "✅ Employee added successfully!";
+                Session["SuccessMessage"] = " Employee added successfully!";
                 Response.Redirect(Request.RawUrl);
-
-
-
 
             }
 
             catch (Exception ex) 
             {
-                lblMessage.Text = GetAlert("❌ Error: " + ex.Message, "danger");
+                lblMessage.Text = GetAlert(" Error: " + ex.Message, "danger");
 
 
             }
@@ -174,7 +199,8 @@ namespace EmployeeManagement
                 {
                     if (salary < 20000)
                     {
-                        lblSalary.BackColor = System.Drawing.Color.Orange;
+                        //lblSalary.BackColor = System.Drawing.Color.Orange;
+                        lblSalary.ForeColor= System.Drawing.Color.Orange;
                     }
                     else if (salary >= 20000 && salary < 30000)
                     {
@@ -274,7 +300,10 @@ namespace EmployeeManagement
         protected void gvEmployee_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             gvEmployee.EditIndex = -1;
+            lblMessage.Text = GetAlert(" Edit cancelled.", "warning");
             LoadEmployees();
+            
+
         }
 
         //protected void gvEmployee_RowUpdating(object sender, GridViewUpdateEventArgs e)
