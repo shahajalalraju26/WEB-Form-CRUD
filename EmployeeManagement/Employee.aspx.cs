@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -23,9 +24,7 @@ namespace EmployeeManagement
                 LoadEmployees();
                 
 
-
             }
-
 
 
         }
@@ -139,19 +138,19 @@ namespace EmployeeManagement
         }
 
       
-        private void ClearForm()
-        {
-            txtName.Text = "";
-            ddlGender.SelectedIndex = 0;
-            txtDesignation.Text = "";
-            txtMobile.Text = "";
-            txtJoiningDate.Text = "";
-            txtNID.Text = "";
-            txtPresentAddress.Text = "";
-            txtParmanentAddress.Text = "";
-            txtSalary.Text = "";
-            chkIsActive.Checked = false;
-        }
+        //private void ClearForm()
+        //{
+        //    txtName.Text = "";
+        //    ddlGender.SelectedIndex = 0;
+        //    txtDesignation.Text = "";
+        //    txtMobile.Text = "";
+        //    txtJoiningDate.Text = "";
+        //    txtNID.Text = "";
+        //    txtPresentAddress.Text = "";
+        //    txtParmanentAddress.Text = "";
+        //    txtSalary.Text = "";
+        //    chkIsActive.Checked = false;
+        //}
         private string GetAlert(string message, string type)
         {
             return $@"<div class='alert alert-{type} alert-dismissible fade show' role='alert'>
@@ -160,6 +159,9 @@ namespace EmployeeManagement
               </div>";
         }
 
+       
+
+     
         private void LoadEmployees(string sortExpression = null, string sortDirection = "ASC")
         {
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -179,9 +181,19 @@ namespace EmployeeManagement
                     gvEmployee.DataSource = dt;
 
                 }
-                
+
                 gvEmployee.DataBind();
             }
+
+           
+
+        }
+
+        //View Detail Button Redirect
+        protected void btnViewDetails_Command(object sender, CommandEventArgs e)
+        {
+            string employeeId = e.CommandArgument.ToString();
+            Response.Redirect("EmployeeDetails.aspx?ID=" + employeeId);
         }
 
 

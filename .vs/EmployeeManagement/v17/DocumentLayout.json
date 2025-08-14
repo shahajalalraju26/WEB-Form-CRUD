@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\Raju\\WForm\\EmployeeManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|d:\\raju\\wform\\employeemanagement\\employeemanagement\\employee.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|d:\\raju\\wform\\employeemanagement\\employeemanagement\\employeedetails.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employeedetails.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|d:\\raju\\wform\\employeemanagement\\employeemanagement\\employee.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employee.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|D:\\Raju\\WForm\\EmployeeManagement\\employeemanagement\\employee.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employee.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|D:\\Raju\\WForm\\EmployeeManagement\\employeemanagement\\employee.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employee.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|d:\\raju\\wform\\employeemanagement\\employeemanagement\\employeedetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\employeedetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|D:\\Raju\\WForm\\EmployeeManagement\\employeemanagement\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|D:\\Raju\\WForm\\EmployeeManagement\\employeemanagement\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -17,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|D:\\Raju\\WForm\\EmployeeManagement\\employeemanagement\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|D:\\Raju\\WForm\\EmployeeManagement\\employeemanagement\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ACADF45-4B93-4FEB-B2D3-DFF160A41FD1}|EmployeeManagement\\EmployeeManagement.csproj|solutionrelative:employeemanagement\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +38,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EmployeeDetails.aspx.cs",
+              "DocumentMoniker": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\EmployeeDetails.aspx.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement\\EmployeeDetails.aspx.cs",
+              "ToolTip": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\EmployeeDetails.aspx.cs",
+              "RelativeToolTip": "EmployeeManagement\\EmployeeDetails.aspx.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA8wBEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T09:38:38.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeDetails.aspx",
+              "DocumentMoniker": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\EmployeeDetails.aspx",
+              "RelativeDocumentMoniker": "EmployeeManagement\\EmployeeDetails.aspx",
+              "ToolTip": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\EmployeeDetails.aspx",
+              "RelativeToolTip": "EmployeeManagement\\EmployeeDetails.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-13T09:29:58.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Employee.aspx.cs",
               "DocumentMoniker": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\Employee.aspx.cs",
               "RelativeDocumentMoniker": "EmployeeManagement\\Employee.aspx.cs",
               "ToolTip": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\Employee.aspx.cs",
               "RelativeToolTip": "EmployeeManagement\\Employee.aspx.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAIwJ8AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADUBAAAAAAAAAAAIwD0AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-11T04:40:05.58Z",
               "EditorCaption": ""
@@ -60,13 +98,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Web.config",
               "DocumentMoniker": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\Web.config",
               "RelativeDocumentMoniker": "EmployeeManagement\\Web.config",
               "ToolTip": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\Web.config",
               "RelativeToolTip": "EmployeeManagement\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwA4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-08-11T04:35:45.654Z",
               "EditorCaption": ""
@@ -79,13 +117,14 @@
               "RelativeDocumentMoniker": "EmployeeManagement\\Models\\Employee.cs",
               "ToolTip": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\Models\\Employee.cs",
               "RelativeToolTip": "EmployeeManagement\\Models\\Employee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T10:36:18.372Z"
+              "WhenOpened": "2025-08-10T10:36:18.372Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Site.Master",
               "DocumentMoniker": "D:\\Raju\\WForm\\EmployeeManagement\\EmployeeManagement\\Site.Master",
               "RelativeDocumentMoniker": "EmployeeManagement\\Site.Master",

@@ -137,7 +137,11 @@
             DataKeyNames="Id" OnRowEditing="gvEmployee_RowEditing" OnRowUpdating="gvEmployee_RowUpdating" OnRowCreated="gvEmployee_RowCreated"
             OnRowCancelingEdit="gvEmployee_RowCancelingEdit" OnRowDeleting="gvEmployee_RowDeleting" OnRowDataBound="gvEmployee_RowDataBound">
             <Columns>
-                <asp:TemplateField HeaderText="SL">
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                        <span class="align-items-center">SL</span>
+                        <%--<asp:LinkButton ID="btnSortId" runat="server" CommandName="Sort" CommandArgument="Id" CssClass="bi bi-arrow-down-up" />--%>
+                    </HeaderTemplate>
                     <ItemTemplate>
                         <%# Container.DataItemIndex + 1 %>
                     </ItemTemplate>
@@ -146,14 +150,27 @@
                     </EditItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField SortExpression="Name">
+                <asp:TemplateField>
+                    <%-- <HeaderTemplate>
+                        <div>
+                            <span class="align-items-center">Name</span>
+                         <asp:LinkButton ID="btnSortName" runat="server" CommandName="Sort" CommandArgument="Name" CssClass="bi bi-arrow-down-up" />
+                        </div>
+                    </HeaderTemplate>--%>
+                    <%-- <HeaderTemplate>
+                        <div>
+                            <span class="align-items-baseline">Name</span>
+                            
+                        </div>
+                    </HeaderTemplate>--%>
                     <HeaderTemplate>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <span style="">Name
-                            </span>
-                            <asp:LinkButton ID="btnSortName" runat="server" CommandName="Sort" CommandArgument="Name" CssClass="bi bi-arrow-down-up" />
+                        <div style="display: flex; align-items: center;">
+                            <span>Name</span>
+                            <input type="text" id="nameSearch" placeholder="Search..." style="display: none; margin-left: 5px;" />
+                            <i class="bi bi-search" id="nameSearchIcon" style="cursor: pointer; margin-left: 5px;"></i>
                         </div>
                     </HeaderTemplate>
+
                     <ItemTemplate>
                         <label>
                             <%# Eval("Name") %>
@@ -184,7 +201,7 @@
 
                 <asp:TemplateField>
                     <HeaderTemplate>
-                        <span Class=" align-items-center">Designation</span>
+                        <span class=" align-items-center">Designation</span>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <label><%# Eval("Designation") %></label>
@@ -195,9 +212,9 @@
                     </EditItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField>
+                <%--<asp:TemplateField>
                     <HeaderTemplate>
-                        <span Class=" align-items-center">Mobile</span>
+                        <span class=" align-items-center">Mobile</span>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <label><%# Eval("Mobile") %></label>
@@ -207,12 +224,12 @@
                         <asp:TextBox ID="txtMobile" runat="server" CssClass="form-control" Text='<%# Bind("Mobile") %>'></asp:TextBox>
                     </EditItemTemplate>
 
-                </asp:TemplateField>
+                </asp:TemplateField>--%>
 
-               
+
                 <asp:TemplateField SortExpression="JoiningDate">
                     <HeaderTemplate>
-                        <span Class="align-items-center">Joining Date</span>
+                        <span class="align-items-center">Joining Date</span>
                         <asp:LinkButton ID="btnSortJoiningDate" runat="server" CommandName="Sort" CommandArgument="JoiningDate" CssClass="bi bi-arrow-down-up" />
                     </HeaderTemplate>
                     <ItemTemplate>
@@ -225,7 +242,7 @@
 
                 </asp:TemplateField>
 
-                <asp:TemplateField>
+                <%--<asp:TemplateField>
                     <HeaderTemplate>
                         <span class="align-items-center">NID</span>
                     </HeaderTemplate>
@@ -236,7 +253,7 @@
                     <EditItemTemplate>
                         <asp:TextBox ID="txtNID" runat="server" CssClass="form-control" Text='<%# Bind("NID") %>' TextMode="Number"></asp:TextBox>
                     </EditItemTemplate>
-                </asp:TemplateField>
+                </asp:TemplateField>--%>
 
                 <asp:TemplateField>
                     <HeaderTemplate>
@@ -251,7 +268,7 @@
                     </EditItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField>
+                <%--<asp:TemplateField>
                     <HeaderTemplate>
                         <span class="align-items-center">Parmanent Address</span>
                     </HeaderTemplate>
@@ -262,22 +279,21 @@
                     <EditItemTemplate>
                         <asp:TextBox ID="txtParmanentAddress" runat="server" CssClass="form-control" Text='<%# Bind("ParmanentAddress") %>'></asp:TextBox>
                     </EditItemTemplate>
-                </asp:TemplateField>
+                </asp:TemplateField>--%>
 
-                <asp:TemplateField>
+                <%-- <asp:TemplateField>
                     <HeaderTemplate>
                         <span class="align-items-center">Salary</span>
                     </HeaderTemplate>
                     <ItemTemplate>
                         <asp:Label ID="lblSalary" runat="server"><%# Eval("Salary") %></asp:Label>
-<%--                        <label id="lblSalary" runat="server" ></label>--%>
                     </ItemTemplate>
                     <EditItemTemplate>
                         <asp:TextBox ID="txtSalary" runat="server" CssClass="form-control" Text='<%# Bind("Salary") %>' TextMode="Number"></asp:TextBox>
                     </EditItemTemplate>
                     <FooterTemplate>
                     </FooterTemplate>
-                </asp:TemplateField>
+                </asp:TemplateField>--%>
 
 
                 <asp:TemplateField>
@@ -301,7 +317,6 @@
                             <%# Convert.ToBoolean(Eval("IsActive")) 
                              ? "<span class='badge bg-success'>Active</span>" 
                              : "<span class='badge bg-danger'>Inactive</span>" %>
-
                         </label>
 
                     </ItemTemplate>
@@ -315,33 +330,69 @@
 
                 </asp:TemplateField>
 
-               
+
 
                 <asp:TemplateField>
                     <HeaderTemplate>
+                        <span class="align-items-center">Action</span>
                     </HeaderTemplate>
                     <ItemTemplate>
+                        <asp:LinkButton ID="btnViewDetails" ToolTip="View Details" runat="server" 
+                            CommandName="ViewDetails" CommandArgument='<%# Eval("Id") %>' OnCommand="btnViewDetails_Command" 
+                            CssClass="btn btn-sm btn-primary me-1">
+                           <i class="bi bi-eye-fill"></i> View
+                        </asp:LinkButton>
                         <asp:LinkButton ID="btnEdit" runat="server" CommandName="Edit" CssClass="btn btn-sm btn-primary me-1">
-                           <i class="bi bi-pencil-square"></i>Edit
+                           <i class="bi bi-pencil-square"></i> Edit
                         </asp:LinkButton>
                         <asp:LinkButton ID="btnDelete" runat="server" CommandName="Delete" CssClass="btn btn-sm btn-danger" OnClientClick="return confirm('Are you sure you want to delete this item?');">
-                                <i class="fas fa-trash-alt"></i>Delete
+                                <i class="bi bi-trash3"></i> Delete
                         </asp:LinkButton>
                     </ItemTemplate>
 
                     <EditItemTemplate>
                         <asp:LinkButton ID="btnUpdate" runat="server" CommandName="Update" CssClass="btn btn-sm btn-success me-1">
-                            <i class="fas fa-check"></i>Update
+                            <i class="bi bi-check-circle"></i> Update
                         </asp:LinkButton>
+
                         <asp:LinkButton ID="btnCancel" runat="server" CommandName="Cancel" CssClass="btn btn-sm btn-secondary">
-                                <i class="fas fa-times"></i>Cancel
+                                <i class="bi bi-x-square"></i> Cancel
                         </asp:LinkButton>
                     </EditItemTemplate>
+
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
 
     </div>
 
- 
+    <script>
+        $(document).ready(function () {
+
+            // Click on search icon to toggle search box
+            $("#nameSearchIcon").on("click", function () {
+                $("#nameSearch").toggle().focus();
+            });
+
+            // Instant filter on typing
+            $("#nameSearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+
+                $("#<%= gvEmployee.ClientID %> tr").each(function () {
+                    var row = $(this);
+                    var nameCell = row.find("td").eq(1); // Name column (2nd col)
+
+                    if (nameCell.length > 0) { // Confirm this is data row
+                        var cellText = nameCell.text().toLowerCase();
+                        row.toggle(cellText.indexOf(value) > -1);
+                    }
+                });
+            });
+
+        });
+
+
+    </script>
+
+
 </asp:Content>
